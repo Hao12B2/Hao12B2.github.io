@@ -1,0 +1,43 @@
+[
+{
+	"uri": "http://Hao12B2.github.io/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Mục tiêu: Sử dụng chương trình vuln.c có nội dung như dưới đây để thực hiện xóa file dummy trong thư mục /tmp\n#include\u0026lt;stdio.h\u0026gt; #include\u0026lt;string.h\u0026gt; int main(int argc, char* argv[]) { char buf[64]; if (argc==1) printf(\u0026#34;missing argument\\n\u0026#34;); else strcpy(buf,argv[1]); return 0; } "
+},
+{
+	"uri": "http://Hao12B2.github.io/vi/",
+	"title": "MÔ PHỎNG TẤN CÔNG BUFFER OVERFLOW",
+	"tags": [],
+	"description": "",
+	"content": "Hướng dẫn thực hành mô phỏng tấn công stack-based buffer overflow Tổng quan Tấn công buffer overflow (tràn bộ đệm) là một loại lỗ hổng bảo mật trong lập trình. Nó xảy ra khi một chương trình cố gắng ghi nhiều dữ liệu hơn vào một vùng nhớ (buffer) so với dung lượng mà vùng nhớ đó có thể chứa. Điều này dẫn đến việc dữ liệu bị ghi đè lên các vùng nhớ liền kề, gây ra các hành vi bất thường của chương trình.\nCác hacker có thể lợi dụng lỗ hổng này để chèn mã độc vào bộ nhớ, từ đó chiếm quyền kiểm soát hệ thống hoặc gây ra các lỗi nghiêm trọng khác. Có hai loại tấn công buffer overflow phổ biến:\nStack-based buffer overflow: Xảy ra khi dữ liệu được ghi đè lên vùng nhớ stack, thường là do các hàm không kiểm tra kích thước dữ liệu đầu vào. Heap-based buffer overflow: Xảy ra khi dữ liệu được ghi đè lên vùng nhớ heap, thường là do các lỗi trong việc quản lý bộ nhớ động Stack-based buffer overflow thường dễ khai thác hơn vì stack lưu trữ các biến cục bộ và các địa chỉ trả về của hàm. Khi một hàm bị tràn bộ đệm, hacker có thể ghi đè lên địa chỉ trả về và điều khiển luồng thực thi của chương trình. Ngoài ra, việc truy cập vào stack nhanh hơn so với heap vì stack được quản lý theo cấu trúc LIFO (Last In, First Out), trong khi heap cần phải quản lý bộ nhớ động, dẫn đến việc truy cập chậm hơn. Bên cạnh đó, bộ nhớ stack không bị phân mảnh như heap, giúp việc khai thác trở nên dễ dàng hơn. Trong bài này, chúng ta sẽ thực hiện mô phỏng tấn công stack-based buffer overflow.\nNội dung Giới thiệu Chuẩn bị Thực hiện minh họa "
+},
+{
+	"uri": "http://Hao12B2.github.io/vi/2-prerequiste/",
+	"title": "Chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Bạn có thể thực hành bài này với Ubuntu linux VM (VirtualBox) hoặc WSL2 (thích hợp hơn).\nTrên cả hai cách, cài đặt nasm, gcc, gdb-peda bằng cách thực hiện các lệnh sau tại dấu nhắc linux:\n~# sudo apt update ~# sudo apt install git gdb nasm gcc gcc-multilib ~# git clone https://github.com/longld/peda.git ~/peda ~# echo \u0026#34;source ~/peda/peda.py\u0026#34; \u0026gt;\u0026gt; ~/.gdbinit Để viết mã, Bạn nên cài đặt VSCode với các tiện ích mở rộng sau:\nTiện ích mở rộng Mô tả nasm x86 syntax highlighting Đánh dấu mã Remote - WSL Mã trong WSL từ xa Remote - SSH Kết nối với VM qua ssh để mã hóa từ xa Đối với máy tính Apple được trang bị bộ xử lý Apple silicon: Lab này chỉ chạy trên máy tính có bộ xử lý Intel. Nếu bạn sở hữu máy tính có bộ xử lý Apple-silicon (M1/M2), bạn phải sử dụng VM dựa trên đám mây hoặc github codespaces (ưu tiên).\n"
+},
+{
+	"uri": "http://Hao12B2.github.io/vi/3-demostration/",
+	"title": "Minh họa tấn công",
+	"tags": [],
+	"description": "",
+	"content": "Tạo file có tên là dummy với nội dung Hello, my name is Hao trong thư mục /tmp, gõ lệnh ls để kiểm tra đã tạo file thành công hay không. Sau đó chuyển đến thư mục seclabs/bof chứa file vuln.c Tạo biến môi trường có tên là MYVAR bằng lệnh export MYVAR='rm -f /tmp/dummy' và gõ lệnh env | grep MYVAR để quan sát biến (đảm bảo biến đã tạo thành công). Tắt chế độ bảo vệ stack và heap sinh ngẫu nhiên địa chỉ mỗi lần chạy chương trình bằng cách chạy lệnh sudo sysctl -w kernel.randomize_va_space=0 và nhập mật khẩu của người dùng hiện tại. Biên dịch chương trình vuln.c, load chương trình vào gdb (gcc -g vuln.c -o vuln.out -fno-stack-protector -z execstack -mpreferred-stack-boundary=2) rồi chạy chương trình bằng lệnh start, chương trình sẽ dừng tại breakpoint hàm main(), sau đó lần lượt gõ lệnh p system, p exit, find MYVAR để lấy địa chỉ hàm system(), hàm exit() và địa chỉ của biến môi trường MYVAR Như vậy địa chỉ hàm system() là 0xf7e50db0, hàm exit() là 0xf7e449e0 và của MYVAR là 0xffffdf9d. Suy ra địa chỉ của chuỗi 'rm –f /tmp/dummy' là 0xffffdfa3.\nMục tiêu của chúng ta là chuyển điều khiển đến hàm system('rm –f /tmp/dummy'). Do đó, ta sẽ ghi đè địa chỉ hàm system() lên return address của hàm main() Tham số rm –f /tmp/dummy của hàm system() có địa chỉ là ebp+0x8, tức là địa chỉ của tham số argv của hàm main(), vậy ta sẽ ghi đè địa chỉ của rm –f /tmp/dummy lên argv. Khi thực hiện xong hàm system() thì thanh ghi eip sẽ chỉ đến địa chỉ của argc, do đó ta sẽ ghi đè địa chỉ của hàm exit() lên argc để chương trình có thể thoát một cách bình thường.\nChạy chương trình với chuỗi đầu vào: 'a'*68+'\\xb0\\x0d\\xe5\\xf7'+'\\xe0\\x49\\xe4\\xf7'+'\\xa3\\xdf\\xff\\xff'.\nr $(python -c \u0026#34;print(\u0026#39;a\u0026#39;*68+\u0026#39;\\xb0\\x0d\\xe5\\xf7\u0026#39;+\u0026#39;\\xe0\\x49\\xe4\\xf7\u0026#39;+\u0026#39;\\xa3\\xdf\\xff\\xff\u0026#39;)\u0026#34;) Trong đó, 68 ký tự a (byte) để ghi đè lên buf và ebp của hàm main, 4 byte tiếp theo là địa chỉ hàm system(), 4 byte kế tiếp là địa chỉ hàm exit() và cuối cùng là địa chỉ của rm –f /tmp/dummy\nThoát gdb bằng lệnh q, vào lại thư mục /tmp và gõ lệnh ls và ll để xem file dummy đã được xóa hay chưa. Như vậy file dummy đã được xóa thành công khỏi thư mục /tmp.\nNguyễn Văn Hào\n"
+},
+{
+	"uri": "http://Hao12B2.github.io/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://Hao12B2.github.io/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

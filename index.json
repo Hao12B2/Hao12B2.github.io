@@ -1,0 +1,43 @@
+[
+{
+	"uri": "http://Hao12B2.github.io/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Objective: Use the program vuln.c with the following content to delete the dummy file in the /tmp folder.\n#include\u0026lt;stdio.h\u0026gt; #include\u0026lt;string.h\u0026gt; int main(int argc, char* argv[]) { char buf[64]; if (argc==1) printf(\u0026#34;missing argument\\n\u0026#34;); else strcpy(buf,argv[1]); return 0; } "
+},
+{
+	"uri": "http://Hao12B2.github.io/",
+	"title": "SIMULATING BUFFER OVERFLOW ATTACK",
+	"tags": [],
+	"description": "",
+	"content": "Practical Guide to Simulating Stack-Based Buffer Overflow Attack Overview Buffer overflow attack is a type of security vulnerability in programming. It occurs when a program tries to write more data into a memory buffer than it can hold. This leads to data being overwritten in adjacent memory areas, causing abnormal behavior of the program.\nHackers can exploit this vulnerability to inject malicious code into memory, thereby gaining control of the system or causing other serious errors. There are two common types of buffer overflow attacks:\nStack-based buffer overflow: Occurs when data is overwritten in the stack memory area, usually due to functions not checking the size of input data. Heap-based buffer overflow: Occurs when data is overwritten in the heap memory area, usually due to errors in dynamic memory management. Stack-based buffer overflow is often easier to exploit because the stack stores local variables and return addresses of functions. When a function experiences a buffer overflow, hackers can overwrite the return address and control the program\u0026rsquo;s execution flow. Additionally, accessing the stack is faster than the heap because the stack is managed in a LIFO (Last In, First Out) structure, while the heap requires dynamic memory management, leading to slower access. Furthermore, stack memory is not fragmented like the heap, making exploitation easier. In this article, I will simulate a stack-based buffer overflow attack.\nContent Introduction Preparation Demonstration "
+},
+{
+	"uri": "http://Hao12B2.github.io/2-prerequiste/",
+	"title": "Preparation",
+	"tags": [],
+	"description": "",
+	"content": "You can either practice the labs with Ubuntu linux VM (VirtualBox) or WSL2 (preferable). On either way, install nasm, gcc, gdb-peda by doing the following commands at linux prompt:\n~# sudo apt update ~# sudo apt install git gdb nasm gcc gcc-multilib ~# git clone https://github.com/longld/peda.git ~/peda ~# echo \u0026#34;source ~/peda/peda.py\u0026#34; \u0026gt;\u0026gt; ~/.gdbinit For writing code, You are recommended to install VSCode with the following extensions:\nExtensions Description nasm x86 syntax highlighting Code highlighting Remote - WSL Code in WSL remotely Remote - SSH Connect to VM via ssh to code remotely For Apple computer equipped with Apple silicon processor: This lab only runs on computers with Intel processors. You who own the Apple-silicon processor (M1/M2) computers must use a cloud-based VM or github codespaces (preferable).\n"
+},
+{
+	"uri": "http://Hao12B2.github.io/3-demostration/",
+	"title": "Demostration",
+	"tags": [],
+	"description": "",
+	"content": "Create a file named dummy with the content Hello, my name is Hao in the directory /tmp, type the command ls to check whether the file was created successfully or not. Then go to the directory seclabs/bof containing the file vuln.c Create an environment variable named MYVAR with the command export MYVAR='rm -f /tmp/dummy' and type the command env | grep MYVAR to observe the variable (make sure the variable was created successfully). Turn off stack protection and heap address randomization each time the program is run by running the command sudo sysctl -w kernel.randomize_va_space=0 and entering the current user\u0026rsquo;s password. Compile the program vuln.c, load the program into gdb (gcc -g vuln.c -o vuln.out -fno-stack-protector -z execstack -mpreferred-stack-boundary= 2) then run the program with the command start, the program will stop at the breakpoint function main(), then type the command p system in turn. , p exit, find MYVAR to get the address of function system(), function exit() and address of environment variable MYVAR So the address of the system() function is 0xf7e50db0, the exit() function is 0xf7e449e0 and of MYVAR is 0xffffdf9d. It follows that the address of the string 'rm –f /tmp/dummy' is 0xffffdfa3. Our goal is to pass control to the function system('rm –f /tmp/dummy'). Therefore, we will overwrite the system() function address to the return address of the main() function. The rm –f /tmp/dummy parameter of the system() function has the address ebp+0x8, which is the address of the argv parameter of function main(), so we will overwrite the address of rm –f /tmp/dummy to argv. When the system() function is completed, the eip register will point to the address of argc, so we will overwrite the address of the function ** exit()** to argc so the program can exit normally.Run the program with the input string: 'a'*68+'\\xb0\\x0d\\xe5\\xf7'+'\\xe0\\x49\\xe4\\xf7'+'\\xa3\\xdf\\xff\\xff'.\nr $(python -c \u0026#34;print(\u0026#39;a\u0026#39;*68+\u0026#39;\\xb0\\x0d\\xe5\\xf7\u0026#39;+\u0026#39;\\xe0\\x49\\xe4\\xf7\u0026#39;+\u0026#39;\\xa3\\xdf\\xff\\xff\u0026#39;)\u0026#34;) Of which, 68 characters a (bytes) to overwrite buf and ebp of function main, 4 The next byte is the address of the function system(), the next 4 bytes are the address of the function exit() and finally the address of rm –f /tmp/ dummy\nExit gdb with the command q, go back to the directory /tmp and type the commands ls and ll to see the file dummy has been deleted or not. So the file dummy has been successfully deleted from the directory /tmp.\nNguyen Van Hao\n"
+},
+{
+	"uri": "http://Hao12B2.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://Hao12B2.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
