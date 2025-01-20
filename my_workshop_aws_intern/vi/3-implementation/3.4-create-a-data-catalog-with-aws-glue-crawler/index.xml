@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tạo danh mục dữ liệu với AWS Glue Crawler on XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</title>
-    <link>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/</link>
+    <link>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/</link>
     <description>Recent content in Tạo danh mục dữ liệu với AWS Glue Crawler on XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <atom:link href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

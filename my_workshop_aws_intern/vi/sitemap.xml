@@ -2,220 +2,220 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/1-introduction/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/1-introduction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/1-introduction/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/1-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/1-introduction/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/1-introduction/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/2-prerequiste/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/2-prerequiste/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/2-prerequiste/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/4-cleanupresources/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/4-cleanupresources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/categories/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/categories/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/categories/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/categories/"
                 />
   </url><url>
-    <loc>http://Hao12B2.github.io/my_workshop_aws_intern/vi/tags/</loc>
+    <loc>https://Hao12B2.github.io/my_workshop_aws_intern/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/tags/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/tags/"
+                href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/tags/"
                 />
   </url>
 </urlset>

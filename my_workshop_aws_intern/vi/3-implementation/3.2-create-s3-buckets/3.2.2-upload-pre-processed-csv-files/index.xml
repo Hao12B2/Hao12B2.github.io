@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tải các tệp CSV đã được tiền xử lý on XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</title>
-    <link>http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/</link>
+    <link>https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/</link>
     <description>Recent content in Tải các tệp CSV đã được tiền xử lý on XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <atom:link href="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

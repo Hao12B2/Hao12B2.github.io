@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create S3 Buckets on BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</title>
-    <link>http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/</link>
+    <link>https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/</link>
     <description>Recent content in Create S3 Buckets on BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
