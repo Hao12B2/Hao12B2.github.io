@@ -1,125 +1,125 @@
 [
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/1-introduction/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/1-introduction/",
 	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan Trong workshop này, chúng ta sẽ xây dựng một pipeline xử lý dữ liệu toàn diện sử dụng các dịch vụ đám mây AWS. Mặc dù chúng ta sẽ minh họa pipeline với bộ dữ liệu Spotify, tuy nhiên, kiến trúc dự án đủ linh hoạt để xử lý bất kỳ bộ dữ liệu nào. Trọng tâm là xử lý và phân tích dữ liệu bằng các công cụ AWS như S3, Glue và Athena.\nTổng quan về kiến trúc workshop Lớp Staging: Dữ liệu thô được lưu trữ trong một bucket S3. Pipeline ETL: AWS Glue xử lý và chuyển dữ liệu từ lớp staging sang kho dữ liệu. Kho Dữ liệu: Dữ liệu đã xử lý được lưu trữ trong một bucket S3 khác. Danh mục Dữ liệu: AWS Glue Crawler tạo cơ sở dữ liệu và các bảng cho kho dữ liệu. Phân tích Dữ liệu: AWS Athena truy vấn dữ liệu đã xử lý. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/",
 	"title": "Tạo các buckets và folders trong nó",
 	"tags": [],
 	"description": "",
 	"content": "1. Trong AWS Management Console, tìm kiếm S3 trong thanh tìm kiếm và chọn dịch vụ S3. 2. Nhấp vào Create bucket 3. Nhập tên bucket my-workshop-bucket-spotify, để tất cả các cài đặt khác mặc định và cuộn xuống để nhấp vào Create bucket 4. Sau đó, nhấp vào bucket my-workshop-bucket-spotify mà bạn vừa tạo và nhấp vào Create folder 5. Tên thư mục: Nhập staging và nhấp vào Create folder. 6. Lặp lại các bước trên để tạo một thư mục khác có tên datawarehouse. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/",
 	"title": "Tạo IAM Role cho ETL Job",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập vào AWS Management Console và mở IAM console, sau đó chọn Roles bên thanh điều hướng và chọn Create role. Chọn AWS service tại mục trusted entity type, chọn Glue từ danh sách các dịch vụ và nhấn Next Trên trang Add permissions, chọn chính sách AmazonS3FullAccess và nhấn Next. Đặt tên cho role là glue_s3_access , kiểm tra lại chính sách và chọn Create role. Role được tạo thành công. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/",
 	"title": "Tạo người dùng IAM",
 	"tags": [],
 	"description": "",
 	"content": "1. Trong AWS Management Console, tìm kiếm IAM trong thanh tìm kiếm và chọn dịch vụ IAM. 2. Trong IAM Dashboard, nhấp vào Users từ menu bên trái và sau đó nhấp vào nút Create user. 3. Nhập các chi tiết sau và nhấp Next:\nUsername: Nhập workshop_user. Access Type: Chọn Provide user access to the AWS Management Console optional Console Password: Chọn Custom password và đặt mật khẩu an toàn. Password Reset: Tùy chọn, yêu cầu người dùng đặt lại mật khẩu khi đăng nhập lần đầu. 4. Gán các quyền\nTrong trang Set permissions, Chọn Attach policies directly. Tìm và chọn các chính sách sau:\nAmazonS3FullAccess AWSGlueConsoleFullAccess AmazonAthenaFullAccess AmazonQuickSightAccess AWSQuickSightDescribeRDS IAMFullAccess Nhấn Next để di chuyển đến phần Review and create và sau đó chọn Create user Chỉ trong vài giây, người dùng workshop_user đã được tạo thành công. Và bây giờ, bạn có thể đăng nhập với tư cách người dùng mới bằng tên người dùng và mật khẩu. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/",
 	"title": "Thiết lập lưu trữ kết quả truy vấn",
 	"tags": [],
 	"description": "",
 	"content": " Điều hướng đến AWS Athena từ AWS Management Console Nhấp vào Launch query editor Trước khi chạy bất kỳ truy vấn nào, bạn phải chỉ định một vị trí cho kết quả truy vấn.\nTạo một S3 bucket mới có tên là athena-output-for-workshop. Trong cài đặt Athena, đặt vị trí kết quả truy vấn vào bucket mới này Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/",
 	"title": "XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS",
 	"tags": [],
 	"description": "",
 	"content": "XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS Tổng quan Trong workshop này, chúng ta sẽ xây dựng một quy trình kỹ thuật dữ liệu toàn diện sử dụng các dịch vụ đám mây AWS. Mặc dù chúng ta sẽ minh họa quy trình với bộ dữ liệu Spotify, kiến trúc dự án đủ linh hoạt để xử lý bất kỳ bộ dữ liệu nào. Trọng tâm là xử lý và phân tích dữ liệu bằng các công cụ AWS như S3, Glue và Athena.\nTổng quan về Kiến trúc Dự án Lớp Staging: Dữ liệu thô được lưu trữ trong một bucket S3. ETL Pipeline: AWS Glue xử lý và chuyển dữ liệu từ lớp staging sang kho dữ liệu. Kho Dữ Liệu: Dữ liệu đã xử lý được lưu trữ trong một bucket S3 khác. Danh Mục Dữ Liệu: AWS Glue Crawler tạo cơ sở dữ liệu và các bảng cho kho dữ liệu. Phân Tích Dữ Liệu: AWS Athena truy vấn dữ liệu đã xử lý. Nội dung Giới thiệu Chuẩn bị Triển khai Dọn dẹp tài nguyên Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/",
 	"title": "Cấu hình ETL Job với AWS Glue",
 	"tags": [],
 	"description": "",
 	"content": "Trong phần này, chúng ta sẽ cố gắng tạo một pipeline dữ liệu để chuyển dữ liệu từ lớp staging sang kho dữ liệu. Chúng ta sẽ sử dụng AWS Glue để tạo pipeline dữ liệu. AWS Glue là một dịch vụ được quản lý bởi AWS để tạo pipeline dữ liệu.\n1. Tạo một Glue Job mới\nTrong AWS Management Console, tìm kiếm Glue trong thanh tìm kiếm và chọn dịch vụ AWS Glue. Trong bảng điều khiển AWS Glue, nhấp vào Visual ETL dưới phần ETL jobs. Nhấp vào Visual ETL dưới mục Create job, chúng ta sẽ vào trang chủ Visual ETL. 2. Thiết lập nguồn dữ liệu\nTrong bảng Add nodes, nhấp vào Amazon S3 trong phần Sources 3 lần để tạo 3 nguồn vì chúng ta có 3 tệp CSV. Chọn bucket Amazon S3 đầu tiên và đổi tên thành Artist. Nhấp vào Browse S3 và chọn tệp từ s3://my-workshop-bucket-spotify/staging/spotify_artist_data_2023.csv. Sau đó, chọn Data format là CSV. Lặp lại các bước tương tự cho 2 bucket S3 khác.\nAlbums Tracks 3. Cấu hình chuyển đổi dữ liệu\nBây giờ để kết hợp Albums và Artist, nhấp vào biểu tượng ADD, chọn join từ Transforms và kết nối các nodes như hình dưới đây. Sau khi kết nối các nodes của cả hai bucket với Join Transform. Thêm điều kiện nơi Albums artist_id = Artist id và đổi tên join thành Join Albums and Artist. Bây giờ thêm một Join Transform khác để kết hợp bucket Tracks và Join Albums and Artist. Bây giờ chọn Join và thêm điều kiện Join Albums and Artist track_id = Tracks id và đổi tên join thành Join with Tracks. Để loại bỏ các cột không cần thiết, chọn Drop Fields từ node Transforms. Chúng ta loại bỏ các cột trùng lặp và các cột giống nhau mà chúng ta không cần. Ở đây id (Tracks id) là inner join với Artist id nên chọn id. 4. Thiết lập đích dữ liệu\nBước tiếp theo là thêm đích đến. Nhấp vào bucket Amazon S3 trong phần Targets Đổi tên node Destination và thêm vị trí đích S3 s3://my-workshop-bucket-spotify/datawarehouse/ và đảm bảo loại nén là Snappy. Nhập tên như My Workshop AWS Intern Spotify vào Name trong tab Job details và chọn IAM Role glue_s3_access đã tạo trước đó.\nType: Chọn Spark\nGlue Version: Chọn phiên bản Glue mới nhất có sẵn.\nLanguage: Chọn Python 3 Requested number of workers: 4 (có thể nhập số khác) Để mặc định các mục khác và nhấp vào Save. 5. Chạy Glue Job\nXem lại cài đặt job của bạn. Nhấp vào Run job trong tab Runs để bắt đầu quá trình ETL, chuyển đổi và di chuyển dữ liệu từ lớp staging sang kho dữ liệu. Chờ vài phút, job đã chạy thành công. Kiểm tra bucket S3 datawarehouse để xem các tệp đã được ghi chưa. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/2-prerequiste/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/2-prerequiste/",
 	"title": "Chuẩn bị",
 	"tags": [],
 	"description": "",
 	"content": "Yêu cầu Một tài khoản AWS (bắt buộc) Hiểu biết cơ bản về các dịch vụ AWS như S3, Glue và Athena Các dịch vụ AWS được sử dụng Amazon S3: Để lưu trữ dữ liệu thô và đã xử lý. AWS Glue: Để xây dựng và quản lý các pipeline ETL. AWS Athena: Để truy vấn dữ liệu bằng cú pháp giống SQL. Nguồn dữ liệu Dữ liệu được sử dụng trong hội thảo này được lấy từ Spotify Dataset 2023 có sẵn trên Kaggle. Bộ dữ liệu, được tạo bởi Tony Gordon Jr., bao gồm thông tin chi tiết về các album, nghệ sĩ, bài hát của Spotify và các đặc điểm âm thanh khác nhau như khả năng nhảy, năng lượng, độ ồn và nhiều hơn nữa. Bộ dữ liệu có sẵn ở định dạng CSV và đã được tiền xử lý để sử dụng trong dự án này.\nMô tả dữ liệu Albums: Chứa chi tiết về tất cả các album, bao gồm ID album, tên, độ phổ biến và ngày phát hành. Artists: Chứa thông tin về các nghệ sĩ, bao gồm tên của họ, số lượng người theo dõi và thể loại. Tracks: Chứa dữ liệu cấp bài hát, bao gồm ID bài hát, độ phổ biến và các đặc điểm khác như khả năng nhảy và năng lượng. Spotify Features: Chứa các đặc điểm âm thanh khác nhau như độ ồn, chế độ, độ nói và cảm xúc. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/",
 	"title": "Tải các tệp CSV đã được tiền xử lý",
 	"tags": [],
 	"description": "",
 	"content": "\rTrong thời gian thực, dữ liệu trong lớp staging sẽ đến từ Dynamo DB hoặc instance cơ sở dữ liệu của chúng ta, nhưng đối với dự án này, chúng ta sẽ thêm dữ liệu thủ công.\n1. Chọn thư mục staging, nhấp vào Upload và sau đó nhấp vào Add files. Chọn các tệp CSV đã được tiền xử lý (spotify_albums_data_2023.csv, spotify_artist_data_2023.csv, spotify_tracks_data_2023.csv) từ máy tính của bạn. 2. Nhấp vào Upload để tải các tệp lên thư mục staging. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.2-create-s3-buckets/",
 	"title": "Tạo các S3 Buckets",
 	"tags": [],
 	"description": "",
 	"content": "Nội dung Tạo bucket và folder Tải các tệp CSV đã được tiền xử lý Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/",
 	"title": "Viết các truy vấn SQL",
 	"tags": [],
 	"description": "",
 	"content": " Trong trình soạn thảo truy vấn Athena, viết các truy vấn SQL để phân tích dữ liệu\nVí dụ truy vấn: SELECT * FROM datawarehouse LIMIT 5;. Truy vấn này sẽ lấy 5 bản ghi đầu tiên từ bảng datawarehouse. Nhấn Run để thực thi câu lệnh SQL. Kết quả sẽ được hiển thị trong trình soạn thảo truy vấn, và đầu ra sẽ được lưu trong bucket S3 đã chỉ định (athena-output-for-workshop). Một ví dụ khác: Câu truy vấn này sẽ tìm ra 10 nghệ sĩ có nhiều người theo dõi nhất\nSELECT name, followers FROM ( SELECT DISTINCT name, CAST(followers AS INTEGER) AS followers FROM datawarehouse ) AS subquery ORDER BY followers DESC LIMIT 10; Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/",
 	"title": "Thiết lập AWS Glue cho quá trình ETL dữ liệu",
 	"tags": [],
 	"description": "",
 	"content": "Nội dung Tạo IAM Role cho ETL Job Cấu hình ETL Job với AWS Glue Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/",
 	"title": "Tiến hành thực hiện",
 	"tags": [],
 	"description": "",
 	"content": "Nội dung Tạo IAM User Tạo S3 buckets Thiết lập AWS Glue cho ETL Tạo Data Catalog với AWS Glue Crawler Truy vấn dữ liệu với AWS Athena Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/4-cleanupresources/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",
 	"content": "1. Xóa Crawler 2. Xóa Cơ sở dữ liệu 3. Xóa Glue Job 4. Xóa S3 Buckets\nathena-output-for-workshop aws-glue-assets my-workshop-bucket-spotify 5. Xóa IAM Role \u0026amp; User\nXóa role glue-s3-access Xóa user workshop_user Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/",
 	"title": "Tạo danh mục dữ liệu với AWS Glue Crawler",
 	"tags": [],
 	"description": "",
 	"content": "1. Tạo một Crawler mới\nTrong bảng điều khiển AWS Glue, nhấp vào Crawlers dưới phần Data Catalog. Sau đó, nhấp vào nút Create crawler. Crawler name: Nhập spotify_crawler và nhấp Next. Chọn Add a data source Data store: Chọn S3, cung cấp đường dẫn đến bucket datawarehouse trong phần S3 path và nhấp Add an S3 data source. Sau đó, nhấp Next. Chọn IAM role mà chúng ta đã tạo trước đó và trước khi làm điều này, hãy thêm chính sách AWSGlueServiceRole vào role này. Sau đó, nhấp Next. 2. Tạo một cơ sở dữ liệu mới\nMở tab trùng lặp. Đi đến AWS Glue \u0026raquo; Data catalog \u0026raquo; Databases, và tạo một cơ sở dữ liệu mới bằng cách chọn Add database. Database Name: Nhập spotify_db. Quay lại Crawlers, chọn cơ sở dữ liệu đã tạo, nhấp Next và Create the Crawler. 3. Chạy Crawler\nSau khi thiết lập crawler, nhấp Run crawler. Crawler sẽ quét dữ liệu trong thư mục datawarehouse và tạo các bảng tương ứng trong cơ sở dữ liệu spotify_db. Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.5-query-data-with-aws-athena/",
 	"title": "Truy vấn dữ liệu với AWS Athena",
 	"tags": [],
 	"description": "",
 	"content": "Nội dung Thiết lập lưu trữ kết quả truy vấn Viết các truy vấn SQL Nguyễn Văn Hào\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/categories/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/vi/tags/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/vi/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

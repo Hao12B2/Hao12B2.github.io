@@ -12,21 +12,21 @@
     <title>Config ETL Job with AWS Glue :: BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</title>
 
     
-    <link href="/my_workshop_aws_intern/css/nucleus.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hybrid.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/theme.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/nucleus.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hybrid.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737355317" rel="stylesheet">
     
-    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737355317" rel="stylesheet">
     
     
 
-    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737355317"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737353233"></script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737355317"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737355317"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/hao12b2.github.io\/my_workshop_aws_intern\/";
+        var baseurl = "http:\/\/Hao12B2.github.io\/my_workshop_aws_intern\/";
     
 </script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737355317"></script>
 
     
   </div>
@@ -569,7 +569,7 @@
                   
                     
                     
-                      <option id="en" value="https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/" selected>English</option>
+                      <option id="en" value="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/" selected>English</option>
                     
                   
               
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="vi" value="https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/">Tiếng Việt</option>
+                      <option id="vi" value="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/">Tiếng Việt</option>
                     
                   
               
@@ -722,38 +722,38 @@
 <ul>
 <li>
 <p>In the AWS Management Console, search for <code>Glue</code> in the search bar and select the AWS Glue service.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_glue.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/glue_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_glue.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/glue_home.png"></p>
 </li>
 <li>
 <p>In the AWS Glue dashboard, click on <strong>Visual ETL</strong> under the <strong>ETL jobs</strong> section.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_visual_ETL.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_visual_ETL.png"></p>
 </li>
 <li>
 <p>Click <strong>Visual ETL</strong> under Create job, we go to <strong>Visual ETL</strong> home.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/visual_ETL_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/visual_ETL_home.png"></p>
 </li>
 </ul>
 <p><strong>2. Set Up Data Sources</strong></p>
 <ul>
 <li>
 <p>In <strong>Add nodes</strong> panel, click on Amazon S3 in Sources section 3 times to create 3 sources because we have 3 CSV files.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/add_3_sources.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/add_3_sources.png"></p>
 </li>
 <li>
 <p>Select the first Amazon S3 bucket and rename it with <code>Artist</code>. Click on <strong>Browse S3</strong> and select the file from the <strong><code>s3://my-workshop-bucket-spotify/staging/spotify_artist_data_2023.csv</code></strong>. After that, select the <strong>Data format</strong> as CSV.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_first_source_artist.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_artist_first_source.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_first_source_artist.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_artist_first_source.png"></p>
 </li>
 <li>
 <p>Repeat the same steps for the other 2 S3 Buckets.</p>
 <ul>
 <li><code>Albums</code>
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_second_source_albums.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_albums_second_source.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_second_source_albums.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_albums_second_source.png"></li>
 <li><code>Tracks</code>
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_third_source_tracks.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_tracks_third_source.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_third_source_tracks.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_tracks_third_source.png"></li>
 </ul>
 </li>
 </ul>
@@ -761,39 +761,39 @@
 <ul>
 <li>
 <p>Now to join <strong>Albums</strong> and <strong>Artist</strong>, click on the ADD symbol, select join from <strong>Transforms</strong> and connect nodes as per the image below.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_artist_albums.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_artist_albums.png"></p>
 </li>
 <li>
 <p>After joining the nodes of both the buckets to the Join Transform. Add a condition where Albums <strong>artist_id =</strong> Artist <strong>id</strong> and rename the join <code>Join Albums and Artist</code>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_albums_artist.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_albums_artist.png"></p>
 </li>
 <li>
 <p>Now add another Join Transfrom to join <strong>Tracks</strong> s3 bucket and <strong>Join Albums and Artist</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_tracks_with_albums_and_artist.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_tracks_with_albums_and_artist.png"></p>
 </li>
 <li>
 <p>Now select the Join and add the condition Join Albums and Artist <strong>track_id =</strong> Tracks <strong>id</strong> and rename the join as <code>Join with Tracks</code>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_with_tracks.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_with_tracks.png"></p>
 </li>
 <li>
 <p>To drop unnecessary columns, select <strong>Drop Fields</strong> from Transforms node.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_drop_fields.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_drop_fields.png"></p>
 </li>
 <li>
 <p>We remove duplicate columns and Identical columns we don&rsquo;t need. Here <strong>id</strong> (Tracks <strong>id</strong>) is inner join to Artist <strong>id</strong> so select <strong>id</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_drop_fields.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_drop_fields.png"></p>
 </li>
 </ul>
 <p><strong>4. Set Up Data Target</strong></p>
 <ul>
 <li>
 <p>Next step is to add the destination. Click Amazon S3 bucket in the Targets section
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_target.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_target.png"></p>
 </li>
 <li>
 <p>Rename the <code>Destination</code> node and add the S3 Target location <strong><code>s3://my-workshop-bucket-spotify/datawarehouse/</code></strong> and make sure the compression type is Snappy.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_target.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_destination.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_target.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_destination.png"></p>
 </li>
 <li>
 <p>Enter a name like <code>My Workshop AWS Intern Spotify</code> into Name in Job details tab and choose IAM Role <strong><code>glue_s3_access</code></strong> created earlier.</p>
@@ -806,32 +806,32 @@
 </li>
 <li>
 <p><strong>Language</strong>: Select Python 3
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/job_details_rename_and_choose_role.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/job_details_rename_and_choose_role.png"></p>
 </li>
 <li>
 <p><strong>Requested number of workers</strong>: 4 (can enter other)
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_worker_numbers.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_worker_numbers.png"></p>
 </li>
 <li>
 <p>Leave the rest default and click <strong>Save</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/save_job_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/save_job_success.png"></p>
 </li>
 </ul>
 <p><strong>5. Run the Glue Job</strong></p>
 <ul>
 <li>Review your job settings.</li>
 <li>Click <strong>Run job</strong> in <strong>Runs</strong> tab to start the ETL process, transforming and moving data from the staging layer to the data warehouse.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_run_job.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_run_job.png"></li>
 </ul>
-<p><img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_started.png"></p>
+<p><img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_started.png"></p>
 <ul>
 <li>
 <p>Wait a few minutes, the job ran successfully.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_success.png"></p>
 </li>
 <li>
 <p>Check the <strong>datawarehouse</strong> S3 bucket to see if the files have been written.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/file_written_into_destination.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/file_written_into_destination.png"></p>
 </li>
 </ul>
 <blockquote>
@@ -1157,19 +1157,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737355317"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/learn.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/learn.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737355317"></script>
 
-    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737353233" rel="stylesheet" />
-    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737353233"></script>
+    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737355317" rel="stylesheet" />
+    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737355317"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

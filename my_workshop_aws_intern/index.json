@@ -1,125 +1,125 @@
 [
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/",
 	"title": "BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA",
 	"tags": [],
 	"description": "",
 	"content": "BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA Overview In this workshop, we will build a comprehensive data engineering pipeline using AWS cloud services. While we demonstrate the pipeline with the Spotify dataset, the project architecture is flexible enough to handle any dataset. The focus is on processing and analyzing data using various AWS tools like S3, Glue and Athena.\nProject Architecture Overview Staging Layer: Raw data is stored in an S3 bucket. ETL Pipeline: AWS Glue processes and transfers data from the staging layer to the data warehouse. Data Warehouse: Processed data is stored in another S3 bucket. Data Catalog: AWS Glue Crawler creates a database and tables for the data warehouse. Data Analysis: AWS Athena queries the processed data. Content Introduction Preparation Implementation Clean up resources Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/",
 	"title": "Create Buckets and Folders",
 	"tags": [],
 	"description": "",
 	"content": "1. In the AWS Management Console, search for S3 in the search bar and select the S3 service. 2. Click on Create bucket 3. Enter the name of the bucket my-workshop-bucket-spotify, leave all other settings as default and scroll down to click Create bucket 4. Then, click on the bucket my-workshop-bucket-spotify you just created and click on Create folder 5. Folder name: Enter staging and click Create folder. 6. Repeat the above steps to create another folder named datawarehouse. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.1-create-role-for-etl-job/",
 	"title": "Create IAM Role for ETL Job",
 	"tags": [],
 	"description": "",
 	"content": " Access the AWS Management Console and open the IAM console, then select Roles from the navigation pane and choose Create role. Select AWS service as the trusted entity type, choose Glue from the list of services, and click Next On the Add permissions page, select the AmazonS3FullAccess policy and click Next. Name the role glue_s3_access, review the policy, and choose Create role. The role is created successfully. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/",
 	"title": "Create IAM User",
 	"tags": [],
 	"description": "",
 	"content": "1. In the AWS Management Console, search for IAM in the search bar and select the IAM service. 2. In the IAM Dashboard, click on **Users from the left-hand menu and then click Create user button 3. Enter the following details and click Next:\nUsername: Enter workshop_user. Access Type: Select Provide user access to the AWS Management Console optional Console Password: Choose Custom password and set a secure password. Password Reset: Optionally, require the user to reset the password upon first login. 4. Assign Permissions\nOn the Set permissions page, select Attach policies directly. Search for and select the following policies:\nAmazonS3FullAccess AWSGlueConsoleFullAccess AmazonAthenaFullAccess AmazonQuickSightAccess AWSQuickSightDescribeRDS IAMFullAccess Click Next to go to Review and create section and then click Create user In just a few seconds, user workshop_user is created successfully. And now, you can log in as new user with username and password. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/1-introduction/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/1-introduction/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
 	"content": "Overview In this workshop, we will build a comprehensive data engineering pipeline using AWS cloud services. While we demonstrate the pipeline with the Spotify dataset, the project architecture is flexible enough to handle any dataset. The focus is on processing and analyzing data using various AWS tools like S3, Glue and Athena.\nWorkshop Architecture Overview Staging Layer: Raw data is stored in an S3 bucket. ETL Pipeline: AWS Glue processes and transfers data from the staging layer to the data warehouse. Data Warehouse: Processed data is stored in another S3 bucket. Data Catalog: AWS Glue Crawler creates a database and tables for the data warehouse. Data Analysis: AWS Athena queries the processed data. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.1-setup-query-result-storage/",
 	"title": "Set up query result storage",
 	"tags": [],
 	"description": "",
 	"content": " Navigate to AWS Athena from the AWS Management Console Click on Launch query editor Before running any queries, you must specify a location for query results.\nCreate a new S3 bucket named athena-output-for-workshop. In the Athena settings, set the query result location to this new bucket Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/",
 	"title": "Config ETL Job with AWS Glue",
 	"tags": [],
 	"description": "",
 	"content": "In this section, we\u0026rsquo;ll try to create a data pipeline that will transfer our data from the staging layer to the data warehouse. we\u0026rsquo;ll be making use of AWS Glue to create a data pipeline. AWS glue is a managed service provided by AWS to create a data pipeline.\n1. Create a New Glue Job\nIn the AWS Management Console, search for Glue in the search bar and select the AWS Glue service. In the AWS Glue dashboard, click on Visual ETL under the ETL jobs section. Click Visual ETL under Create job, we go to Visual ETL home. 2. Set Up Data Sources\nIn Add nodes panel, click on Amazon S3 in Sources section 3 times to create 3 sources because we have 3 CSV files. Select the first Amazon S3 bucket and rename it with Artist. Click on Browse S3 and select the file from the s3://my-workshop-bucket-spotify/staging/spotify_artist_data_2023.csv. After that, select the Data format as CSV. Repeat the same steps for the other 2 S3 Buckets.\nAlbums Tracks 3. Configure Data Transformations\nNow to join Albums and Artist, click on the ADD symbol, select join from Transforms and connect nodes as per the image below. After joining the nodes of both the buckets to the Join Transform. Add a condition where Albums artist_id = Artist id and rename the join Join Albums and Artist. Now add another Join Transfrom to join Tracks s3 bucket and Join Albums and Artist. Now select the Join and add the condition Join Albums and Artist track_id = Tracks id and rename the join as Join with Tracks. To drop unnecessary columns, select Drop Fields from Transforms node. We remove duplicate columns and Identical columns we don\u0026rsquo;t need. Here id (Tracks id) is inner join to Artist id so select id. 4. Set Up Data Target\nNext step is to add the destination. Click Amazon S3 bucket in the Targets section Rename the Destination node and add the S3 Target location s3://my-workshop-bucket-spotify/datawarehouse/ and make sure the compression type is Snappy. Enter a name like My Workshop AWS Intern Spotify into Name in Job details tab and choose IAM Role glue_s3_access created earlier.\nType: Choose Spark\nGlue Version: Choose the latest Glue version available.\nLanguage: Select Python 3 Requested number of workers: 4 (can enter other) Leave the rest default and click Save. 5. Run the Glue Job\nReview your job settings. Click Run job in Runs tab to start the ETL process, transforming and moving data from the staging layer to the data warehouse. Wait a few minutes, the job ran successfully. Check the datawarehouse S3 bucket to see if the files have been written. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/",
 	"title": "Create S3 Buckets",
 	"tags": [],
 	"description": "",
 	"content": "Content Create Buckets and Folders Upload pre-processed CSV Files Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/2-prerequiste/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/2-prerequiste/",
 	"title": "Preparation",
 	"tags": [],
 	"description": "",
 	"content": "Prerequisites An AWS account (mandatory) Basic understanding of AWS services like S3, Glu and Athena AWS Services Used Amazon S3: For storing raw and processed data. AWS Glue: For building and managing ETL pipelines. AWS Athena: For querying data using SQL-like syntax. Data Source The data used in this workshop is sourced from the Spotify Dataset 2023 available on Kaggle. The dataset, created by Tony Gordon Jr., includes detailed information about Spotify albums, artists, tracks, and various audio features like danceability, energy, loudness, and more. The dataset is available in CSV format and has been pre-processed for use in this project.\nData Description Albums: Contains details of all the albums, including album ID, name, popularity, and release date. Artists: Contains information about the artists, including their names, number of followers, and genres. Tracks: Contains track-level data, including track ID, popularity, and other features like danceability and energy. Spotify Features: Contains various audio features like loudness, mode, speechiness, and valence. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.2-upload-pre-processed-csv-files/",
 	"title": "Upload Pre-Processed CSV files",
 	"tags": [],
 	"description": "",
 	"content": "\rIn real-time data in a staging layer will be coming from through Dynamo DB or our database instance, but for this project, we are adding our data manually.\n1. Choose staging folder, click Upload and then Add files. Select the pre-processed CSV files (spotify_albums_data_2023.csv, spotify_artist_data_2023.csv, spotify_tracks_data_2023.csv) from your local machine. 2. Click Upload to upload the files to the staging folder. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/3.5.2-write-sql-queries/",
 	"title": "Write SQL Queries",
 	"tags": [],
 	"description": "",
 	"content": " In the Athena query editor, write SQL queries to analyze the data\nExample query: SELECT * FROM datawarehouse LIMIT 5;. This query will fetch the first 5 records from the datawarehouse table. Click Run to execute the SQL statement. The results will be displayed in the query editor, and the output will be saved in the specified S3 bucket (athena-output-for-workshop). Another example: This query will find the 10 artists with the most followers\nSELECT name, followers FROM ( SELECT DISTINCT name, CAST(followers AS INTEGER) AS followers FROM datawarehouse ) AS subquery ORDER BY followers DESC LIMIT 10; Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/",
 	"title": "Implementation",
 	"tags": [],
 	"description": "",
 	"content": "Content Create IAM User Create S3 buckets Setup AWS Glue for ETL Create a Data Catalog with AWS Glue Crawler Query Data with AWS Athena Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/",
 	"title": "Set up AWS Glue for ETL",
 	"tags": [],
 	"description": "",
 	"content": "Content Create IAM Role for ETL Job Config ETL Job with AWS Glue Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/4-cleanupresources/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/4-cleanupresources/",
 	"title": "Clean up resources",
 	"tags": [],
 	"description": "",
 	"content": "1. Delete Crawler 2. Delete Databases 3. Delete Glue Job 4. Delete S3 Buckets\nathena-output-for-workshop aws-glue-assets my-workshop-bucket-spotify 5. Delete IAM Role \u0026amp; User\nDelete role glue-s3-access Delete user workshop_user Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/",
 	"title": "Create a data catalog with AWS Glue Crawler",
 	"tags": [],
 	"description": "",
 	"content": "1. Create a New Crawler\nIn the AWS Glue dashboard, click on Crawlers under the Data Catalog section. Then, click on Create crawler button. Crawler name: Enter spotify_crawler and click Next. Choose Add a data source Data store: Select S3, provide the path to the datawarehouse bucket in S3 path section and click Add an S3 data source. After this, click Next Select the IAM role we created earlier and before this please do add another policy AWSGlueServiceRole to this role. Then, click Next. 2. Create a New Database\nOpen the duplicate tab. Go to the AWS Glue \u0026raquo; Data catalog \u0026raquo; Databases, and create a new database by selecting Add database. Database Name: Enter spotify_db. Back to the Crawlers, select the created database, Click Next and Create the Crawler. 3. Run the Crawler\nAfter setting up the crawler, click Run crawler. The crawler will scan the data in the datawarehouse folder and create corresponding tables in the spotify_db database. Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.5-query-data-with-aws-athena/",
 	"title": "Query data with AWS Athena",
 	"tags": [],
 	"description": "",
 	"content": "Content Setup Query Result Storage Write SQL Queries Nguyen Van Hao\n"
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/categories/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://hao12b2.github.io/my_workshop_aws_intern/tags/",
+	"uri": "http://Hao12B2.github.io/my_workshop_aws_intern/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

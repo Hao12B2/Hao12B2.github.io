@@ -12,21 +12,21 @@
     <title>Create a data catalog with AWS Glue Crawler :: BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</title>
 
     
-    <link href="/my_workshop_aws_intern/css/nucleus.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hybrid.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/theme.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/nucleus.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hybrid.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737355317" rel="stylesheet">
     
-    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737355317" rel="stylesheet">
     
     
 
-    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737355317"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737353233"></script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737355317"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737355317"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/hao12b2.github.io\/my_workshop_aws_intern\/";
+        var baseurl = "http:\/\/Hao12B2.github.io\/my_workshop_aws_intern\/";
     
 </script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737355317"></script>
 
     
   </div>
@@ -569,7 +569,7 @@
                   
                     
                     
-                      <option id="en" value="https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/" selected>English</option>
+                      <option id="en" value="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/" selected>English</option>
                     
                   
               
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="vi" value="https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/">Tiếng Việt</option>
+                      <option id="vi" value="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.4-create-a-data-catalog-with-aws-glue-crawler/">Tiếng Việt</option>
                     
                   
               
@@ -715,58 +715,58 @@
 <ul>
 <li>
 <p>In the AWS Glue dashboard, click on <strong>Crawlers</strong> under the <strong>Data Catalog</strong> section. Then, click on <strong>Create crawler</strong> button.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/crawler_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/crawler_home.png"></p>
 </li>
 <li>
 <p><strong>Crawler name</strong>: Enter <code>spotify_crawler</code> and click <strong>Next</strong>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_1_crawler_name.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_1_crawler_name.png"></p>
 </li>
 <li>
 <p>Choose <strong>Add a data source</strong>
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_home_click_add_datasource.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_home_click_add_datasource.png"></p>
 </li>
 <li>
 <p><strong>Data store</strong>: Select S3, provide the path to the <strong>datawarehouse</strong> bucket in <strong>S3 path</strong> section and click <strong>Add an S3 data source</strong>. After this, click <strong>Next</strong>
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_click_add_datasource.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_choose_s3_datawarehouse_datasource.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_done.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_click_add_datasource.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_choose_s3_datawarehouse_datasource.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_2_done.png"></p>
 </li>
 <li>
 <p>Select the IAM role we created earlier and before this please do add another policy <strong>AWSGlueServiceRole</strong> to this role. Then, click <strong>Next</strong>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_home.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_choose_iam_role.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_add_permission_role.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_policy_attach_role_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_home.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_choose_iam_role.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_add_permission_role.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_policy_attach_role_success.png"></p>
 </li>
 </ul>
 <p><strong>2. Create a New Database</strong></p>
 <ul>
 <li>
 <p>Open the duplicate tab. Go to the AWS Glue &raquo; Data catalog &raquo; Databases, and create a new database by selecting <strong>Add database</strong>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_database_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_database_home.png"></p>
 </li>
 <li>
 <p><strong>Database Name</strong>: Enter <code>spotify_db</code>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_database_name.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_create_database_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_database_name.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_3_create_database_success.png"></p>
 </li>
 <li>
 <p>Back to the Crawlers, select the created database, Click <strong>Next</strong> and <strong>Create the Crawler</strong>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_choose_target_db.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_create_crawler.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_create_crawler_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_choose_target_db.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_create_crawler.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/step_4_create_crawler_success.png"></p>
 </li>
 </ul>
 <p><strong>3. Run the Crawler</strong></p>
 <ul>
 <li>
 <p>After setting up the crawler, click <strong>Run crawler</strong>.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/choose_run_crawler.png">
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/crawler_run_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/choose_run_crawler.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/crawler_run_success.png"></p>
 </li>
 <li>
 <p>The crawler will scan the data in the <strong>datawarehouse</strong> folder and create corresponding tables in the <strong>spotify_db</strong> database.
-<img src="/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/check_spotify_db.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.4.create-a-data-catalog-with-aws-glue-crawler/check_spotify_db.png"></p>
 </li>
 </ul>
 <blockquote>
@@ -1088,19 +1088,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737355317"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/learn.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/learn.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737355317"></script>
 
-    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737353233" rel="stylesheet" />
-    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737353233"></script>
+    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737355317" rel="stylesheet" />
+    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737355317"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

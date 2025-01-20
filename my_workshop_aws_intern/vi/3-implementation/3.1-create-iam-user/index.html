@@ -12,21 +12,21 @@
     <title>Tạo người dùng IAM :: XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</title>
 
     
-    <link href="/my_workshop_aws_intern/css/nucleus.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hybrid.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/theme.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/nucleus.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hybrid.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737355317" rel="stylesheet">
     
-    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737355317" rel="stylesheet">
     
     
 
-    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737355317"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737353233"></script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737355317"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737355317"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/hao12b2.github.io\/my_workshop_aws_intern\/\/vi";
+        var baseurl = "http:\/\/Hao12B2.github.io\/my_workshop_aws_intern\/\/vi";
     
 </script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737355317"></script>
 
     
   </div>
@@ -569,7 +569,7 @@
                   
                     
                     
-                      <option id="en" value="https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/">English</option>
+                      <option id="en" value="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.1-create-iam-user/">English</option>
                     
                   
               
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="vi" value="https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/" selected>Tiếng Việt</option>
+                      <option id="vi" value="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.1-create-iam-user/" selected>Tiếng Việt</option>
                     
                   
               
@@ -712,22 +712,22 @@
 
 
 	<p><strong>1.</strong> Trong AWS Management Console, tìm kiếm <code>IAM</code> trong thanh tìm kiếm và chọn dịch vụ IAM.
-<img alt="choose_iam_service" src="/images/3.implementation/3.1.create-iam-user/choose_iam_service.png"></p>
+<img alt="choose_iam_service" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_iam_service.png"></p>
 <p><strong>2.</strong> Trong IAM Dashboard, nhấp vào <strong>Users</strong> từ menu bên trái và sau đó nhấp vào nút <strong>Create user</strong>.
-<img alt="choose_users_iam" src="/images/3.implementation/3.1.create-iam-user/choose_users_iam.png"></p>
+<img alt="choose_users_iam" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_users_iam.png"></p>
 <p><strong>3.</strong> Nhập các chi tiết sau và nhấp <strong>Next</strong>:</p>
 <ul>
 <li><strong>Username</strong>: Nhập <code>workshop_user</code>.</li>
 <li><strong>Access Type</strong>: Chọn <strong>Provide user access to the AWS Management Console optional</strong></li>
 <li><strong>Console Password</strong>: Chọn <strong>Custom password</strong> và đặt mật khẩu an toàn.</li>
 <li><strong>Password Reset</strong>: Tùy chọn, yêu cầu người dùng đặt lại mật khẩu khi đăng nhập lần đầu.
-<img alt="fill_user_details" src="/images/3.implementation/3.1.create-iam-user/fill_user_details.png"></li>
+<img alt="fill_user_details" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/fill_user_details.png"></li>
 </ul>
 <p><strong>4.</strong> Gán các quyền</p>
 <ul>
 <li>
 <p>Trong trang <strong>Set permissions</strong>, Chọn <strong>Attach policies directly</strong>.
-<img alt="guide_attach_policy" src="/images/3.implementation/3.1.create-iam-user/guide_attach_policy.png"></p>
+<img alt="guide_attach_policy" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/guide_attach_policy.png"></p>
 </li>
 <li>
 <p>Tìm và chọn các chính sách sau:</p>
@@ -741,25 +741,25 @@
 </ul>
 </li>
 </ul>
-<p><img alt="choose_attach_policy_s3" src="/images/3.implementation/3.1.create-iam-user/choose_attach_policy_s3.png">
-<img alt="choose_attach_policy_glue" src="/images/3.implementation/3.1.create-iam-user/choose_attach_policy_glue.png">
-<img alt="choose_attach_policy_athena" src="/images/3.implementation/3.1.create-iam-user/choose_attach_policy_athena.png">
-<img alt="choose_attach_policy_quicksight_athena" src="/images/3.implementation/3.1.create-iam-user/choose_attach_policy_quicksight_athena.png">
-<img alt="choose_attach_policy_quicksight_rds" src="/images/3.implementation/3.1.create-iam-user/choose_attach_policy_quicksight_rds.png">
-<img alt="choose_iam_fullaccess" src="/images/3.implementation/3.1.create-iam-user/choose_iam_fullaccess.png"></p>
+<p><img alt="choose_attach_policy_s3" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_attach_policy_s3.png">
+<img alt="choose_attach_policy_glue" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_attach_policy_glue.png">
+<img alt="choose_attach_policy_athena" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_attach_policy_athena.png">
+<img alt="choose_attach_policy_quicksight_athena" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_attach_policy_quicksight_athena.png">
+<img alt="choose_attach_policy_quicksight_rds" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_attach_policy_quicksight_rds.png">
+<img alt="choose_iam_fullaccess" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/choose_iam_fullaccess.png"></p>
 <ul>
 <li>
 <p>Nhấn <strong>Next</strong> để di chuyển đến phần <strong>Review and create</strong> và sau đó chọn <strong>Create user</strong>
-<img alt="review_create_user" src="/images/3.implementation/3.1.create-iam-user/review_create_user.png"></p>
+<img alt="review_create_user" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/review_create_user.png"></p>
 </li>
 <li>
 <p>Chỉ trong vài giây, người dùng <strong>workshop_user</strong> đã được tạo thành công.
-<img alt="create_user_success" src="/images/3.implementation/3.1.create-iam-user/create_user_success.png"></p>
+<img alt="create_user_success" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/create_user_success.png"></p>
 </li>
 <li>
 <p>Và bây giờ, bạn có thể đăng nhập với tư cách người dùng mới bằng tên người dùng và mật khẩu.
-<img alt="login_new_user" src="/images/3.implementation/3.1.create-iam-user/login_new_user.png">
-<img alt="login_new_user_success" src="/images/3.implementation/3.1.create-iam-user/login_new_user_success.png"></p>
+<img alt="login_new_user" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/login_new_user.png">
+<img alt="login_new_user_success" src="/my_workshop_aws_intern/images/3.implementation/3.1.create-iam-user/login_new_user_success.png"></p>
 </li>
 </ul>
 <blockquote>
@@ -1078,19 +1078,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737355317"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/learn.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/learn.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737355317"></script>
 
-    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737353233" rel="stylesheet" />
-    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737353233"></script>
+    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737355317" rel="stylesheet" />
+    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737355317"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Cấu hình ETL Job với AWS Glue :: XÂY DỰNG QUY TRÌNH KỸ THUẬT DỮ LIỆU PHÂN TÍCH DỮ LIỆU SPOTIFY VỚI AWS</title>
 
     
-    <link href="/my_workshop_aws_intern/css/nucleus.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hybrid.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/theme.css?1737353233" rel="stylesheet">
-    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/nucleus.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/fontawesome-all.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hybrid.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/featherlight.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/perfect-scrollbar.min.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/auto-complete.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/atom-one-dark-reasonable.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme.css?1737355317" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/hugo-theme.css?1737355317" rel="stylesheet">
     
-    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737353233" rel="stylesheet">
+    <link href="/my_workshop_aws_intern/css/theme-workshop.css?1737355317" rel="stylesheet">
     
     
 
-    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/jquery-3.3.1.min.js?1737355317"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737353233"></script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/lunr.min.js?1737355317"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/auto-complete.js?1737355317"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/hao12b2.github.io\/my_workshop_aws_intern\/\/vi";
+        var baseurl = "http:\/\/Hao12B2.github.io\/my_workshop_aws_intern\/\/vi";
     
 </script>
-<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737353233"></script>
+<script type="text/javascript" src="/my_workshop_aws_intern/js/search.js?1737355317"></script>
 
     
   </div>
@@ -569,7 +569,7 @@
                   
                     
                     
-                      <option id="en" value="https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/">English</option>
+                      <option id="en" value="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/">English</option>
                     
                   
               
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="vi" value="https://hao12b2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/" selected>Tiếng Việt</option>
+                      <option id="vi" value="http://Hao12B2.github.io/my_workshop_aws_intern/vi/3-implementation/3.3-setup-aws-glue-for-etl/3.3.2-config-etl-with-aws-glue/" selected>Tiếng Việt</option>
                     
                   
               
@@ -722,38 +722,38 @@
 <ul>
 <li>
 <p>Trong AWS Management Console, tìm kiếm <code>Glue</code> trong thanh tìm kiếm và chọn dịch vụ AWS Glue.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_glue.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/glue_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_glue.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/glue_home.png"></p>
 </li>
 <li>
 <p>Trong bảng điều khiển AWS Glue, nhấp vào <strong>Visual ETL</strong> dưới phần <strong>ETL jobs</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_visual_ETL.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_visual_ETL.png"></p>
 </li>
 <li>
 <p>Nhấp vào <strong>Visual ETL</strong> dưới mục Create job, chúng ta sẽ vào trang chủ <strong>Visual ETL</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/visual_ETL_home.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/visual_ETL_home.png"></p>
 </li>
 </ul>
 <p><strong>2. Thiết lập nguồn dữ liệu</strong></p>
 <ul>
 <li>
 <p>Trong bảng <strong>Add nodes</strong>, nhấp vào Amazon S3 trong phần Sources 3 lần để tạo 3 nguồn vì chúng ta có 3 tệp CSV.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/add_3_sources.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/add_3_sources.png"></p>
 </li>
 <li>
 <p>Chọn bucket Amazon S3 đầu tiên và đổi tên thành <code>Artist</code>. Nhấp vào <strong>Browse S3</strong> và chọn tệp từ <strong><code>s3://my-workshop-bucket-spotify/staging/spotify_artist_data_2023.csv</code></strong>. Sau đó, chọn <strong>Data format</strong> là CSV.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_first_source_artist.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_artist_first_source.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_first_source_artist.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_artist_first_source.png"></p>
 </li>
 <li>
 <p>Lặp lại các bước tương tự cho 2 bucket S3 khác.</p>
 <ul>
 <li><code>Albums</code>
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_second_source_albums.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_albums_second_source.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_second_source_albums.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_albums_second_source.png"></li>
 <li><code>Tracks</code>
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_third_source_tracks.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_tracks_third_source.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_third_source_tracks.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_tracks_third_source.png"></li>
 </ul>
 </li>
 </ul>
@@ -761,39 +761,39 @@
 <ul>
 <li>
 <p>Bây giờ để kết hợp <strong>Albums</strong> và <strong>Artist</strong>, nhấp vào biểu tượng ADD, chọn join từ <strong>Transforms</strong> và kết nối các nodes như hình dưới đây.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_artist_albums.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_artist_albums.png"></p>
 </li>
 <li>
 <p>Sau khi kết nối các nodes của cả hai bucket với Join Transform. Thêm điều kiện nơi Albums <strong>artist_id =</strong> Artist <strong>id</strong> và đổi tên join thành <code>Join Albums and Artist</code>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_albums_artist.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_albums_artist.png"></p>
 </li>
 <li>
 <p>Bây giờ thêm một Join Transform khác để kết hợp bucket <strong>Tracks</strong> và <strong>Join Albums and Artist</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_tracks_with_albums_and_artist.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_join_tracks_with_albums_and_artist.png"></p>
 </li>
 <li>
 <p>Bây giờ chọn Join và thêm điều kiện Join Albums and Artist <strong>track_id =</strong> Tracks <strong>id</strong> và đổi tên join thành <code>Join with Tracks</code>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_with_tracks.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_transform_join_with_tracks.png"></p>
 </li>
 <li>
 <p>Để loại bỏ các cột không cần thiết, chọn <strong>Drop Fields</strong> từ node Transforms.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_drop_fields.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_drop_fields.png"></p>
 </li>
 <li>
 <p>Chúng ta loại bỏ các cột trùng lặp và các cột giống nhau mà chúng ta không cần. Ở đây <strong>id</strong> (Tracks <strong>id</strong>) là inner join với Artist <strong>id</strong> nên chọn <strong>id</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_drop_fields.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_drop_fields.png"></p>
 </li>
 </ul>
 <p><strong>4. Thiết lập đích dữ liệu</strong></p>
 <ul>
 <li>
 <p>Bước tiếp theo là thêm đích đến. Nhấp vào bucket Amazon S3 trong phần Targets
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_target.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_target.png"></p>
 </li>
 <li>
 <p>Đổi tên node <code>Destination</code> và thêm vị trí đích S3 <strong><code>s3://my-workshop-bucket-spotify/datawarehouse/</code></strong> và đảm bảo loại nén là Snappy.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_target.png">
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_destination.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/done_config_target.png">
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_s3_url_destination.png"></p>
 </li>
 <li>
 <p>Nhập tên như <code>My Workshop AWS Intern Spotify</code> vào Name trong tab Job details và chọn IAM Role <strong><code>glue_s3_access</code></strong> đã tạo trước đó.</p>
@@ -806,32 +806,32 @@
 </li>
 <li>
 <p><strong>Language</strong>: Chọn Python 3
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/job_details_rename_and_choose_role.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/job_details_rename_and_choose_role.png"></p>
 </li>
 <li>
 <p><strong>Requested number of workers</strong>: 4 (có thể nhập số khác)
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_worker_numbers.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_worker_numbers.png"></p>
 </li>
 <li>
 <p>Để mặc định các mục khác và nhấp vào <strong>Save</strong>.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/save_job_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/save_job_success.png"></p>
 </li>
 </ul>
 <p><strong>5. Chạy Glue Job</strong></p>
 <ul>
 <li>Xem lại cài đặt job của bạn.</li>
 <li>Nhấp vào <strong>Run job</strong> trong tab <strong>Runs</strong> để bắt đầu quá trình ETL, chuyển đổi và di chuyển dữ liệu từ lớp staging sang kho dữ liệu.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_run_job.png"></li>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/choose_run_job.png"></li>
 </ul>
-<p><img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_started.png"></p>
+<p><img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_started.png"></p>
 <ul>
 <li>
 <p>Chờ vài phút, job đã chạy thành công.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_success.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/run_job_success.png"></p>
 </li>
 <li>
 <p>Kiểm tra bucket S3 <strong>datawarehouse</strong> để xem các tệp đã được ghi chưa.
-<img src="/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/file_written_into_destination.png"></p>
+<img src="/my_workshop_aws_intern/images/3.implementation/3.3.setup-aws-glue-for-etl/3.3.2.config-etl-with-aws-glue/file_written_into_destination.png"></p>
 </li>
 </ul>
 <blockquote>
@@ -1157,19 +1157,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/clipboard.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/perfect-scrollbar.jquery.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/jquery.sticky.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/featherlight.min.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/highlight.pack.js?1737355317"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/learn.js?1737353233"></script>
-    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737353233"></script>
+    <script src="/my_workshop_aws_intern/js/modernizr.custom-3.6.0.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/learn.js?1737355317"></script>
+    <script src="/my_workshop_aws_intern/js/hugo-learn.js?1737355317"></script>
 
-    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737353233" rel="stylesheet" />
-    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737353233"></script>
+    <link href="/my_workshop_aws_intern/mermaid/mermaid.css?1737355317" rel="stylesheet" />
+    <script src="/my_workshop_aws_intern/mermaid/mermaid.js?1737355317"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

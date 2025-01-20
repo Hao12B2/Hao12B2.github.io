@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Buckets and Folders on BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</title>
-    <link>https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/</link>
+    <link>http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/</link>
     <description>Recent content in Create Buckets and Folders on BUILD A DATA ENGINEERING PIPELINE WITH AWS TO ANALYZE SPOTIFY DATA</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://hao12b2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://Hao12B2.github.io/my_workshop_aws_intern/3-implementation/3.2-create-s3-buckets/3.2.1-create-buckets-and-folders/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
